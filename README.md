@@ -1,1 +1,1 @@
-# BE THE KING OF <span style="color:green"><u>***GRASS!!!!!!!!!!***</u></span>
+# BE THE KING OF <u>***GRASS!!!!!!!!!!***</u>
