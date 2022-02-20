@@ -35,3 +35,7 @@
 - .pivot_table() == 데이터를 원하는 기준으로 요약 정리
 - .melt() == pivot에 의해 요악한 테이블을 요약 전으로 만듬
 - .reset_index() == 행 인덱스 초기화, 기존의 인덱스는 첫번째 열로 자동 삽입, 괄호 안에 drop=True 옵션을 인자로 넣어줄 경우 기존 인덱스를 버리고 재배열
+- .fit(x_train, y_train) == 주어진 학습 데이터로 학습
+- .predict(x_test) == 해당 테스트 데이터로 예측
+- filled = True == class별 노드에 color 채우기
+- impurity=True == 불순도 표시
