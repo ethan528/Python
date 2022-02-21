@@ -39,3 +39,4 @@
 - .predict(x_test) == 해당 테스트 데이터로 예측
 - filled = True == class별 노드에 color 채우기
 - impurity=True == 불순도 표시
+- np.sqrt() == 제곱근 출력
