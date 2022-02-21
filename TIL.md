@@ -40,3 +40,5 @@
 - filled = True == class별 노드에 color 채우기
 - impurity=True == 불순도 표시
 - np.sqrt() == 제곱근 출력
+- scoring="neg_mean_squared_error" == mse의 negative 값을 반환
+- 
