@@ -41,4 +41,6 @@
 - impurity=True == 불순도 표시
 - np.sqrt() == 제곱근 출력
 - scoring="neg_mean_squared_error" == mse의 negative 값을 반환
-- 
+- df.corr() == 상관계수 출력
+- sns.heatmap() == 히트맵 그리기
+- annot=True == 각셀의 숫자 입력
