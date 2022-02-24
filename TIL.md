@@ -51,13 +51,15 @@
 - loss='categorical_crossentropy' == 클래스가 여러 개인 다중 분류 문제에서 사용, label이 원-핫 인코딩 된 형태 즉 label이 class를 나타내는 one-hot vector를 값으로 가질 때 사용, 모델의 마지막 레이어의 활성화 함수는 소프트맥스 함수
 - model=Sequential() == 층을 차례대로 쌓은 모델 생성
 - input_dim=1 == 입력 차원 및 입력노드가 1, x배열의 데이터의 개수랑 동일하게 지정, 맨 처음 입력층에서만 사용
-- activation='' == 
+- activation='' == 활성화함수 설정
 - relu == 은닉 층으로 학습, 역전파를 통해 좋은 성능이 나오기 때문에 마지막 층이 아닌 경우 대부분 사용
 - sigmond == 이진 분류 문제
 - softmax == 확률 값을 이용해 다양한 클래스를 분류하기 위한 문제
 - epchs=100 == 100번 훈련
 - batch_size=10 == 작업단위, 100번 훈련할 때 전체 데이터를 10개로 나누어 훈련, 명시하지 않을 경우 디폴트값인 32로 진행
 - model.evaluate() == 모델 평가
-- LabelEncoder() ==
-- .transform() ==
+- LabelEncoder() == 문자형을 정수형으로 바꿔줌
+- OneHotEncoder() == LabelEncoding 후에 숫자의 크고 작은 특성을 없애기 위해 사용
 - pd.DataFrame() == 데이터프레임 만들기
+- ' '.join() = 문자열을 가지고 있는 리스트를 문자열로 변환
+- 
