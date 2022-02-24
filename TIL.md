@@ -58,3 +58,6 @@
 - epchs=100 == 100번 훈련
 - batch_size=10 == 작업단위, 100번 훈련할 때 전체 데이터를 10개로 나누어 훈련, 명시하지 않을 경우 디폴트값인 32로 진행
 - model.evaluate() == 모델 평가
+- LabelEncoder() ==
+- .transform() ==
+- pd.DataFrame() == 데이터프레임 만들기
