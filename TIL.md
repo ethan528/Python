@@ -62,4 +62,8 @@
 - OneHotEncoder() == LabelEncoding 후에 숫자의 크고 작은 특성을 없애기 위해 사용
 - pd.DataFrame() == 데이터프레임 만들기
 - ' '.join() = 문자열을 가지고 있는 리스트를 문자열로 변환
-- 
+- np.zeros() == 0으로 가득 찬 array 생성
+- df.shape == 행과 열의 개수를 튜플로 반환
+- df.dtypes == 열을 기준으로 데이터 형태 반환
+- df.columns=[''] == 데이터프레이 열 이름 변경 
+- dict.items() == 딕셔너리의 기와 값을 반환
