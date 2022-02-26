@@ -67,4 +67,12 @@
 - df.dtypes == 열을 기준으로 데이터 형태 반환
 - df.columns=[''] == 데이터프레이 열 이름 변경 
 - dict.items() == 딕셔너리의 키와 값을 반환
-- 
+- stats.levene() == pvalue가 0.05보다 크면 등분산
+- stats.ttest_ind() == pvalue 가 e-05일 경우 0.05보다 작다고 볼 수 있다
+- equal_var=True == 등분산일 경우 True로 설정
+- stats.bartlett() == 모든 그룹의 분산이 같다는 가정하에 진행, pvalue가 0.05보다 크면 등분산
+- stats.f_oneway() ==  pvalue가 유의수준보다 낮을 경우 귀무가설 기각, 기각의 경우 모든 그룹의 평균이 같지않다
+- showfliers=False == Outlier를 표시하지 않음 
+- pairwise_tukeyhsd() == 어떤 그룹이 평균이 같은지 확인
+- hsd.summary() == 평균이 같은지 검정 및 결과 요약, p-adj의 값이 0.05 보다 크면 reject의 값이 True, 아니면 False로 나옴
+
