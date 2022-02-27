@@ -154,5 +154,8 @@
 
   print('Chis statistic:{},p-value:{}'.format(result[0],result[1])) == 두 범주형 데이터 사이의 관련성을 확인, p-value가 유의 수준보다 낮을 경우 연관성이 있다
 
-- 
+- plt.scatter(df1, df2) == 산점도 그리기
 
+- stats.pearsonr(df1, df2) == 상관계수와 p-value 반환
+
+- 
