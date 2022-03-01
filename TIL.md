@@ -157,3 +157,5 @@
 - plt.scatter(df1, df2) == 산점도 그리기
 
 - stats.pearsonr(df1, df2) == 상관계수와 p-value 반환
+
+- 
