@@ -159,3 +159,7 @@
 - stats.pearsonr(df1, df2) == 상관계수와 p-value 반환
 
 - .isalnum() == 문자열이 영어, 한글 혹은 숫자이면 True 아니면 False
+
+- sorted(list, reverse = False) ==오름차순으로 정렬, reverse가 True일 경우 내림차순, False가 기본값
+
+- 
