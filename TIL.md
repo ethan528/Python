@@ -162,4 +162,4 @@
 
 - sorted(list, reverse = False) ==오름차순으로 정렬, reverse가 True일 경우 내림차순, False가 기본값
 
-- 
+- replace('old', 'new') == 문자열 내의 'old'를 'new'로 변환
