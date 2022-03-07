@@ -164,4 +164,46 @@
 
 - .replace('old', 'new') == 문자열 내의 'old'를 'new'로 변환
 
-- 
+- cv2.imread('./data/image.jpg', cv2.IMREAD_GRAYSCALE) == 이미지 로드, 흑백으로 로드
+
+  - cv2.IMREAD_UNCHANGED == 원본 사용
+  - cv2.IMREAD_GRAYSCALE == 1 채널, 그레이스케일 적용
+  - cv2.IMREAD_COLOR == 3 채널, BGR 이미지 사용
+  - cv2.IMREAD_ANYDEPTH == 이미지에 따라 정밀도를 16/32비트 또는 8비트로 사용
+  - cv2.IMREAD_ANYCOLOR == 가능한 3 채널, 색상 이미지로 사용
+  - cv2.IMREAD_REDUCED_GRAYSCALE_2 ==: 1 채널, 1/2 크기, 그레이스케일 적용
+  - cv2.IMREAD_REDUCED_GRAYSCALE_4 == 1 채널, 1/4 크기, 그레이스케일 적용
+  - cv2.IMREAD_REDUCED_GRAYSCALE_8 == 1 채널, 1/8 크기, 그레이스케일 적용
+  - cv2.IMREAD_REDUCED_COLOR_2 == 3 채널, 1/2 크기, BGR 이미지 사용
+  - cv2.IMREAD_REDUCED_COLOR_4 == 3 채널, 1/4 크기, BGR 이미지 사용
+  - cv2.IMREAD_REDUCED_COLOR_8 == 3 채널, 1/8 크기, BGR 이미지 사용
+
+- cv2.imwrite('./data/image.jpg', image) == 이미지 저장
+
+- cv2.imshow('이미지', image) == 이미지 표시
+
+- cv2.waitKey() == 키 입력 대기, 사용하지 않을 경우 윈도우 창이 유지되지 않고 종료됨
+
+- cv2.destroyAllWindows() == 모든 윈도우 창 제거, 키 입력 이후 사용
+
+- cv2.VideoCapture('./data/video.mp4') == 동영상 파일 로드
+
+- capture.isOpened() == 동영상 파일 열기 성공 여부 확인
+
+- capture.open(filename) == 동영상 파일 열기
+
+- capture.set(propid, value) == 동영상 속성 설정
+
+- capture.get(propid) == 동영상 속성 반환
+
+- capture.release() == 동영상 파일을 닫고 메모리 해제
+
+- cv2.CAP_PROP_FRAME_WIDTH == 프레임의 너비
+
+- cv2.CAP_PROP_FRAME_HEIGHT == 프레임의 높이
+
+- cv2.CAP_PROP_FRAME_COUNT == 총 프레임 수
+
+- cv2.CAP_PROP_FPS == 프레임 속도
+
+- cv2.CAP_PROP_FOURCC == 코덱 코드
