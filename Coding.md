@@ -218,9 +218,11 @@
 
 - verbose=1 == 0 아무런 표시를 하지 않음,  1 에포크별 진행 사항을 알려줌,  2 에포크별 학습 결과를 알려줌
 
-- cmap='gray' == 
+- cmap='gray' == 색상 설정
 
-- Flatten(input_shape=( , )) ==
+- Flatten() == 2차원 데이터를 1차원 데이터로 바꾸는 역할
+
+- input_shape=( 행, 열, 채널 수 ) == 샘플 수를 제외한 입력 형태를 정의
 
 - to_categorical() == 
 
