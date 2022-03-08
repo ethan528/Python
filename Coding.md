@@ -90,7 +90,7 @@
 
 - optimizer='' == 훈련과정 설정
 
-- metrics=[''] == 훈련과정을 보니터링하는 방식 설정
+- metrics=[''] == 훈련과정을 모니터링하는 방식 설정
 
 - loss='binary_crossentropy' == 클래스가 두 개인 이진 분류 문제에서 사용, label이 0 또는 1을 값으로 가질 때 사용, 모델의 마지막 레이어의 활성화 함수는 시그모이드 함수
 
@@ -207,3 +207,29 @@
 - cv2.CAP_PROP_FPS == 프레임 속도
 
 - cv2.CAP_PROP_FOURCC == 코덱 코드
+
+- df.drop() == 열이나 행 지우기
+
+- aixs=0 == 행을 따라 동작
+
+- aixs=1 == 열을 따라 동작
+
+- df.isnull() == 결측값이 있을 경우 True로 나타냄
+
+- verbose=1 == 0 아무런 표시를 하지 않음,  1 에포크별 진행 사항을 알려줌,  2 에포크별 학습 결과를 알려줌
+
+- cmap='gray' == 
+
+- Flatten(input_shape=( , )) ==
+
+- to_categorical() == 
+
+- .history[] == 
+
+- np.expand_dims() ==
+
+- np.argmax() == 
+
+- np.squeeze() == 
+
+- 
