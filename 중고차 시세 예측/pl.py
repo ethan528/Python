@@ -39,7 +39,6 @@ dft = '선택해주세요'
 for o in opt:
     o.insert(0, dft)
 
-nation_sb = st.sidebar.selectbox("", ("국산", "수입"))
 type_sb = st.sidebar.selectbox("차종", 차종)
 brand_sb = st.sidebar.selectbox("제조사", 제조사)
 if brand_sb != dft:
@@ -59,18 +58,22 @@ insurance_sb = st.sidebar.selectbox("보험사고", ("없음", "있음"))
 # 메인화면
 
 
-left, right = st.beta_columns(2)
+left, right = st.columns(2)
 
 with left:
 
     st.subheader("left")
+
+    """ if model_sb:
+        dfdf = df[(df['car_brand'].str.contains(f'{brand_sb}'))&(df['car_name'].str.contains(f'{model_sb}'))]
+        st.dataframe(dfdf) """
 
 
 with right:
 
     st.subheader("관련 뉴스")
 
-    st.markdown("[1번뉴스](https://www.naver.com/)")
+    st.markdown("[[속보] 尹대통령 “경제위기 태풍...지선 승리 입에 담을 상황 아니다”](https://n.news.naver.com/article/366/0000818540?cds=news_media_pc&type=editn)")
     st.markdown("[2번뉴스](https://www.naver.com/)")
     st.markdown("[3번뉴스](https://www.naver.com/)")
     st.markdown("[4번뉴스](https://www.naver.com/)")
@@ -78,7 +81,52 @@ with right:
 
 
     image = Image.open('./wordcloud.jpg')
-    st.image(image, caption='긍정')
-    st.image(image, caption='부정')
 
+    with st.expander("긍정"):
+        st.image(image)
+
+    with st.expander("부정"):
+        st.image(image)
     
+    
+one, two, three = st.columns(3)
+
+with one:
+    st.text('공사중')
+
+    st.pydeck_chart(pdk.Deck(
+     map_style='mapbox://styles/mapbox/outdoors-v11',
+     initial_view_state=pdk.ViewState(
+         latitude=37.565,
+         longitude=126.986,
+         zoom=11,
+         pitch=50,
+     ),
+     layers=[
+         pdk.Layer(
+            'HexagonLayer',
+            data=df,
+            get_position='[lng, lat]',
+            radius=200,
+            elevation_scale=4,
+            elevation_range=[0, 1000],
+            pickable=True,
+            extruded=True,
+         ),
+         pdk.Layer(
+             'ScatterplotLayer',
+             data=df,
+             get_position='[lng, lat]',
+             get_fill_color='[255,255,255]',
+             get_radius=50,
+         ),
+     ],
+    ))
+
+with two:
+    st.text('공사중')
+
+
+with three:
+    st.text('공사중')
+
