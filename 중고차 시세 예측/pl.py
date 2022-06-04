@@ -13,11 +13,18 @@ from collections import defaultdict
 
 # 타이틀
 
+st.set_page_config(
+     page_title="PINK-LEMON",
+     page_icon="🍋",
+     layout="wide",
+     initial_sidebar_state="expanded"
+ )
 
-st.title('PinkLemon')
+st.title("PINK-LEMON")
 
 
 # 사이드바
+
 
 if st.sidebar.button('초기화'):
     st.experimental_rerun()
@@ -43,10 +50,10 @@ type_sb = st.sidebar.selectbox("차종", 차종)
 brand_sb = st.sidebar.selectbox("제조사", 제조사)
 if brand_sb != dft:
     model_sb = st.sidebar.selectbox("모델", [f"{model}" for model in 제조사_모델[f"{brand_sb}"]])
-year_sb = st.sidebar.text_input("연식을 입력해주세요")
-change_sb = st.sidebar.text_input("소유주 변경횟수를 입력해주세요")
-use_sb = st.sidebar.text_input("사용 개월 수를 입력해주세요")
-mileage_sb = st.sidebar.text_input("주행거리를 입력해주세요")
+year_sb = st.sidebar.text_input("연식을 입력해주세요", help="숫자만 입력해주세요 ex) 12년식=12")
+change_sb = st.sidebar.text_input("소유주 변경횟수를 입력해주세요", help="숫자만 입력해주세요 ex) 12회=12")
+use_sb = st.sidebar.text_input("사용 개월 수를 입력해주세요", help="월단위로 숫자만 입력해주세요 ex) 12개월=12")
+mileage_sb = st.sidebar.text_input("주행거리를 입력해주세요", help="km단위로 숫자만 입력해주세요 ex) 12km=12")
 local_sb = st.sidebar.selectbox("지역", 지역)
 fuel_sb = st.sidebar.selectbox("연료", 연료)
 trans_sb = st.sidebar.selectbox("변속기", ("오토", "수동", "기타", "SAT", "CVT"))
@@ -54,6 +61,7 @@ loss_sb = st.sidebar.selectbox("전손이력", ("정보없음", "없음", "있�
 flood_sb = st.sidebar.selectbox("침수이력", ("정보없음", "없음", "있음"))
 usage_sb = st.sidebar.selectbox("용도이력", ("정보없음", "없음", "있음"))
 insurance_sb = st.sidebar.selectbox("보험사고", ("없음", "있음"))
+
 
 # 메인화면
 
@@ -68,7 +76,6 @@ with left:
         dfdf = df[(df['car_brand'].str.contains(f'{brand_sb}'))&(df['car_name'].str.contains(f'{model_sb}'))]
         st.dataframe(dfdf) """
 
-
 with right:
 
     st.subheader("관련 뉴스")
@@ -79,22 +86,18 @@ with right:
     st.markdown("[4번뉴스](https://www.naver.com/)")
     st.markdown("[5번뉴스](https://www.naver.com/)")
 
-
     image = Image.open('./wordcloud.jpg')
 
     with st.expander("긍정"):
         st.image(image)
 
     with st.expander("부정"):
-        st.image(image)
-    
+        st.image(image)    
     
 one, two, three = st.columns(3)
 
 with one:
-    st.text('공사중')
-
-    st.pydeck_chart(pdk.Deck(
+    """ st.pydeck_chart(pdk.Deck(
      map_style='mapbox://styles/mapbox/outdoors-v11',
      initial_view_state=pdk.ViewState(
          latitude=37.565,
@@ -107,7 +110,7 @@ with one:
             'HexagonLayer',
             data=df,
             get_position='[lng, lat]',
-            radius=200,
+            radius=50,
             elevation_scale=4,
             elevation_range=[0, 1000],
             pickable=True,
@@ -121,12 +124,15 @@ with one:
              get_radius=50,
          ),
      ],
-    ))
+    )) """
 
 with two:
-    st.text('공사중')
-
+    dataframe = pd.DataFrame({
+     'first column': [1, 2, 3, 4],
+     'second column': [10, 20, 30, 40],
+    })
+    st.experimental_show(dataframe)
 
 with three:
-    st.text('공사중')
+    st.image(image)
 
