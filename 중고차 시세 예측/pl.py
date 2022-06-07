@@ -9,6 +9,7 @@ from urllib.error import URLError
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 from collections import defaultdict
+import random
 
 
 # 타이틀
@@ -50,6 +51,8 @@ type_sb = st.sidebar.selectbox("차종", 차종)
 brand_sb = st.sidebar.selectbox("제조사", 제조사)
 if brand_sb != dft:
     model_sb = st.sidebar.selectbox("모델", [f"{model}" for model in 제조사_모델[f"{brand_sb}"]])
+else:
+    model_sb = st.sidebar.selectbox("모델", ("제조사를 선택해주세요", ""), disabled=True)
 year_sb = st.sidebar.text_input("연식을 입력해주세요", help="숫자만 입력해주세요 ex) 12년식=12")
 change_sb = st.sidebar.text_input("소유주 변경횟수를 입력해주세요", help="숫자만 입력해주세요 ex) 12회=12")
 use_sb = st.sidebar.text_input("사용 개월 수를 입력해주세요", help="월단위로 숫자만 입력해주세요 ex) 12개월=12")
@@ -72,67 +75,56 @@ with left:
 
     st.subheader("left")
 
-    """ if model_sb:
-        dfdf = df[(df['car_brand'].str.contains(f'{brand_sb}'))&(df['car_name'].str.contains(f'{model_sb}'))]
-        st.dataframe(dfdf) """
+    #if model_sb:
+    #    dfdf = df[(df['car_brand'].str.contains(f'{brand_sb}'))&(df['car_name'].str.contains(f'{model_sb}'))]
+    #    st.dataframe(dfdf)
+    dataframe = pd.DataFrame({
+     'first column': [1, 2, 3, 4],
+     'second column': [10, 20, 30, 40],
+     'third column': [100, 200, 300, 400],
+     'forth column': [1000, 2000, 3000, 4000]
+    })
+    st.experimental_show(dataframe)
 
 with right:
 
     st.subheader("관련 뉴스")
 
-    st.markdown("[[속보] 尹대통령 “경제위기 태풍...지선 승리 입에 담을 상황 아니다”](https://n.news.naver.com/article/366/0000818540?cds=news_media_pc&type=editn)")
-    st.markdown("[2번뉴스](https://www.naver.com/)")
-    st.markdown("[3번뉴스](https://www.naver.com/)")
-    st.markdown("[4번뉴스](https://www.naver.com/)")
-    st.markdown("[5번뉴스](https://www.naver.com/)")
+    news_df = pd.read_csv(f"./{국산/수입}차_articles./{brand_sb}_articles.csv")
 
-    image = Image.open('./wordcloud.jpg')
+    news_title = random.shuffle(news_df.title)[:5]
+    news_url = [url for url in news_df[news_df["title"] == news_title].url]
+
+    st.markdown(f"[{news_title[0]}]({news_url[0]})")
+    st.markdown(f"[{news_title[1]}]({news_url[1]})")
+    st.markdown(f"[{news_title[2]}]({news_url[2]})")
+    st.markdown(f"[{news_title[3]}]({news_url[3]})")
+    st.markdown(f"[{news_title[4]}]({news_url[4]})")
 
     with st.expander("긍정"):
-        st.image(image)
+        """ image_pos = Image.open(f'./{brand_sb}_{model_sb}_pos.png')
+        st.image(image_pos, width=400) """
 
     with st.expander("부정"):
-        st.image(image)    
+        """ image_neg = Image.open(f'./{brand_sb}_{model_sb}_neg.png')
+        st.image(image_neg, width=400) """
     
 one, two, three = st.columns(3)
 
 with one:
-    """ st.pydeck_chart(pdk.Deck(
-     map_style='mapbox://styles/mapbox/outdoors-v11',
-     initial_view_state=pdk.ViewState(
-         latitude=37.565,
-         longitude=126.986,
-         zoom=11,
-         pitch=50,
-     ),
-     layers=[
-         pdk.Layer(
-            'HexagonLayer',
-            data=df,
-            get_position='[lng, lat]',
-            radius=50,
-            elevation_scale=4,
-            elevation_range=[0, 1000],
-            pickable=True,
-            extruded=True,
-         ),
-         pdk.Layer(
-             'ScatterplotLayer',
-             data=df,
-             get_position='[lng, lat]',
-             get_fill_color='[255,255,255]',
-             get_radius=50,
-         ),
-     ],
-    )) """
+    image = Image.open('./wordcloud.jpg')
+    st.image(image, width=340)
 
 with two:
     dataframe = pd.DataFrame({
      'first column': [1, 2, 3, 4],
      'second column': [10, 20, 30, 40],
+     'third column': [100, 200, 300, 400],
+     'forth column': [1000, 2000, 3000, 4000]
     })
     st.experimental_show(dataframe)
 
 with three:
-    st.image(image)
+    image = Image.open('./wordcloud2.png')
+    st.image(image, width=340)
 
