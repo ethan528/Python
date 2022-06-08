@@ -4,15 +4,15 @@
 import streamlit as st
 import pandas as pd
 from PIL import Image
-import pydeck as pdk
-from urllib.error import URLError
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 from collections import defaultdict
 import random
+import streamlit.components.v1 as components
 
 
 # 타이틀
+
 
 st.set_page_config(
      page_title="PINK-LEMON",
@@ -88,30 +88,46 @@ with left:
 
 with right:
 
-    st.subheader("관련 뉴스")
+    st.subheader(f"{brand_sb} 관련 뉴스")
 
-    news_df = pd.read_csv(f"./{국산/수입}차_articles./{brand_sb}_articles.csv")
+    #news_df = pd.read_csv(f"./{국산/수입}차_articles/{brand_sb}_articles.csv")
+    news_df = pd.read_csv("./수입차_articles/포르쉐_articles.csv")
 
-    news_title = random.shuffle(news_df.title)[:5]
-    news_url = [url for url in news_df[news_df["title"] == news_title].url]
+    news_title = news_df.title.tolist()
+    random.shuffle(news_title)
+    news_title = news_title[3:8]
 
-    st.markdown(f"[{news_title[0]}]({news_url[0]})")
-    st.markdown(f"[{news_title[1]}]({news_url[1]})")
-    st.markdown(f"[{news_title[2]}]({news_url[2]})")
-    st.markdown(f"[{news_title[3]}]({news_url[3]})")
-    st.markdown(f"[{news_title[4]}]({news_url[4]})")
+    news_url = [url for title in news_title for url in news_df[news_df["title"] == title].url]
+
+    st.markdown(f"[1. {news_title[0]}]({news_url[0]})")
+    st.markdown(f"[2. {news_title[1]}]({news_url[1]})")
+    st.markdown(f"[3. {news_title[2]}]({news_url[2]})")
+    st.markdown(f"[4. {news_title[3]}]({news_url[3]})")
+    st.markdown(f"[5. {news_title[4]}]({news_url[4]})")
+
+    st.subheader(f"{model_sb} 관련 키워드")
 
     with st.expander("긍정"):
-        """ image_pos = Image.open(f'./{brand_sb}_{model_sb}_pos.png')
-        st.image(image_pos, width=400) """
+        try:
+            image_pos = Image.open(f'./wordcloud/{brand_sb}/{brand_sb}+{model_sb}+긍정.jpg')
+            st.image(image_pos, width=450)
+        except FileNotFoundError:
+            st.text("준비중입니다")
 
     with st.expander("부정"):
-        """ image_neg = Image.open(f'./{brand_sb}_{model_sb}_neg.png')
-        st.image(image_neg, width=400) """
+        try:
+            image_neg = Image.open(f'./wordcloud/{brand_sb}/{brand_sb}+{model_sb}+부정.jpg')
+            st.image(image_neg, width=450)
+        except FileNotFoundError:
+            st.text("준비중입니다")
     
 one, two, three = st.columns(3)
 
 with one:
+    HtmlFile = open("sample.html", 'r', encoding='utf-8')
+    source_code = HtmlFile.read() 
+    components.html(source_code,height = 1000)
+
     image = Image.open('./wordcloud.jpg')
     st.image(image, width=340)
 
