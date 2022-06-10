@@ -143,4 +143,3 @@ with two:
 with three:
     image = Image.open('./wordcloud2.png')
     st.image(image, width=340)
-
