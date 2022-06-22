@@ -5,4 +5,4 @@ if b+c > 60 and a == 23:
     t = 0
     m = b+c
 else:
-        
+    너무어려붜    
