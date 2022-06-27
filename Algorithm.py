@@ -1,15 +1,15 @@
-a, b = map(int, input().split())
-c = int(input())
+a, b, c = map(int, input().split())
+p = 0
 
+if a == b == c:
+    p = 10000 + (a*1000)
+elif a == b:
+    p = 1000 + (a*100)
+elif a == c:
+    p = 1000 + (a*100)
+elif b == c:
+    p = 1000 + (a*100)
+else:
+    p = max(a,b,c)*100
 
-if b+c >= 60 and a == 23:
-    a = 0
-    b = b+c-60
-if b+c >= 60:
-    a = a+1
-    b = b+c-60
-while b >= 60:
-    a = a+1
-    b = b-60
-
-print(a,b)
+print(p)
