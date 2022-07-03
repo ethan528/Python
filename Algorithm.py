@@ -8,14 +8,14 @@ a = list(ascii_uppercase)
 p = {}
 cnt = 0
 
-for i in a:
-    if i == 7 or 9:
-        temp = 4
-    else:
-        temp = 3
+if W:
+    for i in a:
+        if i == 7 or 9:
+            temp = 4
+        else:
+            temp = 3
     for j in n:
         for _ in range(temp):
-            print(i)
             p[f'{i}'] = j
 
 print(p)
