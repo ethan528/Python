@@ -14,6 +14,7 @@ for i in range(len(a)):
 for i in W:
     if W != '':
         cnt += 2
-    
+    if p[f'{i}'] >= 2:
+        cnt += p[f'{i}']-1
 
-print(p)
+print(cnt)
