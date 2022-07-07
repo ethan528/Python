@@ -6,7 +6,7 @@ while N:
     if N == 1:
         print(F)
     else:
-        M += 5 * M + F
+        M += 5 * F + F
         F += 1
         if  N <= M:
             print(F)
