@@ -5,6 +5,7 @@ F = 1
 while N:
     if N == 1:
         print(F)
+        break
     else:
         M += 5 * F + F
         F += 1
