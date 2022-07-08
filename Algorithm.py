@@ -18,16 +18,26 @@ arr1	arr2	return
 232 543  22 22 11 
 424 241  36 28 18
 314 311  29 20 14
-22
+22 22 11
  28
   14
 [[22, 22, 11], [36, 28, 18], [29, 20, 14]] """
 
-arr1 = [[1, 4], [3, 2], [4, 1]]
-arr2 = [[3, 3], [3, 3]]
+arr1 = [[2, 3, 2], [4, 2, 4], [3, 1, 4]]
+arr2 = [[5, 4, 3], [2, 4, 1], [3, 1, 1]]
 
 answer = [[]]
 
-for i in arr1:
-    for j in arr2:
-        행렬
+temp1 = []
+temp2 = []
+
+for i in range(len(arr1)):
+    s = 0
+    for j in range(len(arr2)):
+        temp1.append(arr1[i][j])
+        for k in range(len(arr2)):
+            temp2.append(arr2[k][i])
+
+
+    print(temp1)
+    print(temp2)
