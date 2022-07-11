@@ -1,11 +1,4 @@
-board = [[0, 1, 1, 1], [1, 1, 1, 1], [1, 1, 1, 1], [0, 0, 1, 0]]
+a = ['1','2','3','4','5']
 
-answer = 0
-
-
-for i in range(len(board)):
-    for j in range(len(board)):
-        if board[i][j] != 0:
-            answer += 1
-
-print(answer)
+for n1, n2 in zip(a, a[1:]):
+    print(n1,n2)
