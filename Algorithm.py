@@ -1,15 +1,22 @@
-id_list = ["muzi", "frodo", "apeach", "neo"]
-report = ["muzi frodo","apeach frodo","frodo neo","muzi neo","apeach muzi"]
-k = 2
+def solution(new_id):
+    answer = ''
+    s = new_id.lower()
+    import re
+    s = re.findall(r'[a-zA-Z0-9\.\_\-\.]', s)
+    s = ''.join(i for i in [s[i] for i in range(len(s)) if s[i] != s [i-1]])
+    if s == '':
+        s += 'a'
+    s = s.lstrip('.').rstrip('.')
+    while len(s) < 3:
+        s += s[-1]
+    if len(s) > 15:
+        s = s[0:15]
+    s = s.lstrip('.').rstrip('.')
+    return s 
 
-zl = [0 for _ in range(len(id_list))]
-bl = dict(zip(id_list, zl))
-wl = [i.split() for i in report]
-rl = []
 
-for i, n in enumerate(wl):
-    if n not in rl:
-        rl.append(n)
-        bl[n[1]] += 1
-el = [n[0] for i, n in enumerate(wl) if bl[n[1]] >= k]
-answer = [el.count(i) if el.count(i) else 0 for i in id_list]
+print(solution("...!@BaT#*..y.abcdefghijklm")) #	"bat.y.abcdefghi"
+print(solution("z-+.^.")) # "z--"
+print(solution("=.=")) # "aaa"
+print(solution("123_.def")) # "123_.def"
+print(solution("abcdefghijklmn.p")) # "abcdefghijklmn"
