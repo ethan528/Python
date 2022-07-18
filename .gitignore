@@ -5,5 +5,10 @@
 *.pptx
 *.jpg
 *.png
+*.dbf
+*.shp
+*.shx
+*.prj
+*.hwp
 컴퓨터공학/
 C_ex/
