@@ -1,5 +1,3 @@
-*.csv
-*.xlsx
 *.html
 *.pdf
 *.pptx
@@ -13,3 +11,10 @@
 *.geojson
 컴퓨터공학/
 C_ex/
+50CELL_SUWON_2020_202007.csv
+50CELL_SUWON_2020_202008.csv
+50CELL_SUWON_2020_202009.csv
+50CELL_SUWON_2020_202010.csv
+50CELL_SUWON_2020_202011.csv
+50CELL_SUWON_2020_202012.csv
+flow_intersection.dbf
