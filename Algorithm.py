@@ -1,17 +1,13 @@
-a, b, v = map(int, input().split())
-h = 0
-d = 0
+n = 10
 
-while v:
-    if d%2 == 0:
-        h += a
-    if d%2 != 0:
-        h -= b
-        if h <= v:
-            d += 1
-    if h >= v:
-        break
-
-
-print(d)
-
+answer = []
+print(int(n**(1/2)))
+for i in range(1, int(n**(1/2)) + 1):
+    if (n % i == 0):
+        answer.append(i) 
+        print('i', i)
+        if ( (i**2) != n) : 
+            answer.append(n // i)
+            print('n//i', n//i)
+            
+print(sum(answer))
