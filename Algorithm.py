@@ -1,3 +1,2 @@
-    months = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-    days = ['FRI', 'SAT', 'SUN', 'MON', 'TUE', 'WED', 'THU']
-    return days[(sum(months[:a-1])+b-1)%7]
+def solution(nums):
+    return len(list(set(nums))[:len(nums)//2]) if len(set(nums)) > len(nums)/2 else len(set(nums))
