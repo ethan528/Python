@@ -1,4 +1,4 @@
-a = [i for i in range(1, 51)]
+n = [1, 2, 7, 6, 4]
 
-for i, j in enumerate(a):
-    print(i%5)
+for i in range(len(n)):
+    print('i', i)
