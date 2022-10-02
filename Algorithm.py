@@ -1,4 +1,2 @@
-n = [1, 2, 7, 6, 4]
-
-for i in range(len(n)):
-    print('i', i)
+-- 코드를 입력하세요
+SELECT COUNT(ANIMAL_ID) AS COUNT FROM ANIMAL_INS;
