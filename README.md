@@ -15,9 +15,8 @@ jupyter keymap
 pylance
 Material Icon Theme
 Prettier - Code formatter
-Editor: Default Formatter = Prettier - Code formatter
-Editor: Format On Save = Check
-Bracket Pair Colorization Toggler
+    Editor: Default Formatter = Prettier - Code formatter
+    Editor: Format On Save = Check
 indent-rainbow
 Auto Rename Tag
 CSS Peek
