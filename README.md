@@ -1,5 +1,15 @@
 # Today I Learned
 
+## Anaconda
+
+conda update -n base conda
+y
+conda update --all
+y
+conda update --all
+y
+python -m pip install --upgrade pip
+
 ## VSCode
 
 Ctrl+K+T > Light High Contrast
