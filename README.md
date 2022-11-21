@@ -1,14 +1,17 @@
 # Today I Learned
 
-## Anaconda
+## 가상환경
 
-conda update -n base conda
-y
-conda update --all
-y
-conda update --all
-y
-python -m pip install --upgrade pip
+conda create -n 가상환경명 python=버전<br>
+conda activate 가상환경명<br>
+conda update -n base conda<br>
+conda update --all<br>
+python -m pip install --upgrade pip<br>
+conda install jupyter notebook<br>
+conda install ipykernel<br>
+conda list --export > packages.txt<br>
+conda deactivate<br>
+conda remove -n 가상환경명 --all<br>
 
 ## VSCode
 
