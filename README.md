@@ -9,7 +9,7 @@ conda update --all<br>
 python -m pip install --upgrade pip<br>
 conda install jupyter notebook<br>
 conda install ipykernel<br>
-conda list --export > packages.txt<br>
+conda env export > 가상환경명.yaml<br>
 conda deactivate<br>
 conda remove -n 가상환경명 --all<br>
 
