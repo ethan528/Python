@@ -9,7 +9,7 @@ conda update --all<br>
 python -m pip install --upgrade pip<br>
 conda install jupyter notebook<br>
 conda install ipykernel<br>
-conda env export -n 가상환경명 > environment.yml<br>
+conda env export > 가상환경명.yaml<br>
 conda deactivate<br>
 conda remove -n 가상환경명 --all<br>
 
@@ -17,18 +17,32 @@ conda remove -n 가상환경명 --all<br>
 
 Ctrl+K+T > Light High Contrast
 
-AREPL for python<br>
-Auto Rename Tag<br>
-Bracket Select<br>
-Checkpoints<br>
-Code Runner<br>
-CSS Peek<br>
-Draw.io Integration<br>
-Git Graph<br>
-GitLens — Git supercharged<br>
-HTML CSS Support<br>
-indent-rainbow<br>
-jupyter<br>
-Live Server<br>
-Material Icon Theme<br>
-Python Extension Pack<br>
+AREPL for python
+
+Auto Rename Tag
+
+Bracket Select
+
+Checkpoints
+
+Code Runner
+
+CSS Peek
+
+Draw.io Integration
+
+Git Graph
+
+GitLens — Git supercharged
+
+HTML CSS Support
+
+indent-rainbow
+
+jupyter
+
+Live Server
+
+Material Icon Theme
+
+Python Extension Pack

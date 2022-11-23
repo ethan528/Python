@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9db12e47-7218-4fce-a856-82cec9b89b21" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/Java.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../a.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../aaa.java" beforeDir="false" />
+    <list default="true" id="4c60d51e-3ff8-4491-87ae-e994ed4bbec8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../딥러닝을 이용한 자연어 처리 입문.ipynb" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +12,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectId" id="2HkmJP1tYXc2ShGmktLsgsQ8Kbh" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2HkmdNCvr3xwx8ksF9oLb35JnUW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -36,11 +30,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="9db12e47-7218-4fce-a856-82cec9b89b21" name="Changes" comment="" />
-      <created>1668837384025</created>
+      <changelist id="4c60d51e-3ff8-4491-87ae-e994ed4bbec8" name="Changes" comment="" />
+      <created>1668837542856</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1668837384025</updated>
+      <updated>1668837542856</updated>
     </task>
     <servers />
   </component>
