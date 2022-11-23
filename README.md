@@ -1,4 +1,4 @@
-# Today I Learned
+# Python
 
 ## 가상환경
 
