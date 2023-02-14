@@ -53,7 +53,7 @@
 
 출력 = print()
 
-# lab: 화씨온도 변환기
+# Lab: 화씨온도 변환기
 
 ```python 
 print("본 프로그램은 섭씨온도를 화씨온도로 변환하는 프로그램입니다.")
@@ -158,7 +158,7 @@ print(midterm_score[0][2]) # 20
 
 ## 리스트의 메모리 저장
 
-```Python
+```python
 kor_score = [49, 79, 20, 100, 80]
 math_score = [43, 59, 85, 30, 90]
 eng_score = [49, 79, 48, 60, 100]
@@ -199,4 +199,241 @@ a = ["color", 1, 0.2]
 - <=, >= = 작거나 같다, 크거나 같다
 
 ### True 와 False 의 치환
-- 
+- 컴퓨터는 기본적으로 이진수만 처리할 수 있으며, True 는 1로, False 는 0으로 처리한다.
+
+### 논리 연산자
+- and = 두 값이 모두 참일 경우 True, 아닐 경우 False
+- or = 두 값 모두 거짓일 경우만 False
+- not = 값을 역으로 반환하여 판단
+
+### if-elif-else 문
+- 중첩 if 문을 간단히 표현할 때 사용
+- 여러 개의 조건을 검토할 수 있다
+
+# Lab: 어떤 종류의 학생인지 맞히기
+
+```python
+print("당신이 태어난 연도를 입력하세요")
+birth_year = input()
+age = 2020 - int(birth_year) +1
+
+if age <= 26 and age >= 20:
+    print("대학생")
+elif age < 20 and age >= 17:
+    print("고등학생")
+elif age < 17 and age >= 14:
+    print("중학생")
+elif age < 14 and age >= 8:
+    print("초등학생")
+else:
+    print("학생이 아닙니다")
+```
+
+# 반복문
+
+## 반복문의 개념
+- 정해진 동작을 반복적으로 수행할 때 내리는 명령어
+
+## for 문
+- 반복 범위를 지정하여 반복을 수행
+
+## while 문
+- 어떤 조건이 만족하는 동안 명령 블록을 수행하고, 해당 조건이 거짓일 경우 더는 반복 명령문을 수행하지 않는 구문
+
+## 반복문의 제어
+
+### break 문
+- 논리적으로 반복을 종료하는 방법
+
+### continue 문
+- 특정 조건에서 남은 명령을 건너뛰고 다음 반복문을 수행
+
+### else 문
+- 어떤 조건이 완전히 끝났을 때 한 번 더 실행해 주는 역할
+- break 등으로 코드가 종료된 경우 else 문이 수행되지 않으므로, 해당 반복문이 완벽히 수행되었는지를 명시적으로 확인하기 위한 코드
+
+# Lab: 구구단 계산기
+
+```python
+print("구구단 몇 단을 계산할까?")
+user_input = input()
+print("구구단", user_input, "단을 계산한다")
+int_input = int(user_input)
+for i in range(1, 10):
+    result = int_input * i
+    print(user_input, "x", i, "=", result)
+```
+
+# 조건문과 반복문 실습
+
+## 문자열 역순 출력
+
+```python
+sentence = "I love you"
+reverse_sentence = ''
+for char in sentence:
+    reverse_setence = char + reverse_sentence
+print(reverse_sentence)
+```
+
+## 십진수를 이진수로 변환
+
+```python
+decimal = 10
+result = ''
+while (decimal > 0):
+    remainder = decimal % 2
+    decimal = decimal //2
+    result = str(remainder) + result
+print(result)
+```
+
+# Lab: 숫자 찾기 게임
+
+```python
+import random # 난수 발생 함수 호출
+guess_number = random.randint(1, 100) # 1 ~ 100 사이 정수 난수 발생
+print("숫자를 맞혀 보세요. (1 ~ 100)")
+users_input = int(input()) # 사용자의 입력을 받음
+while (users_intput is not guess_number): # 사용자 입력과 난수가 같은지 판단
+    if users_input > guess_number: # 사용자 입력이 클 경우
+        print("숫자가 너무 큽니다.")
+    else: # 사용자 입력이 작을 경우
+        print("숫자가 너무 작습니다.")
+    users_input = int(input()) # 다시 사용자 입력을 받음
+else:
+    print("정답입니다.", "입력한 숫자는", 'users_input, "입니다.") # 종료 조건
+```
+
+# Lab: 연속적인 구구단 계산기
+
+```python
+print("구구단 몇 단을 계산할까요(1~9)?")
+x = 1
+while (x is not 0):
+    x = int(inpt())
+    if x == 0: break
+    if not(1 <= x <= 9):
+        print("잘못 입력했습니다", "1부터 9 사이 숫자를 입력하세요")
+        continue
+    else:
+        print("구구단 " + str(x) + "단을 계산합니다.")
+        for i in range(1,10):
+            print(str(x) + " x " + str(i) + " = " + str(x*i))
+        print("구구단 몇 단을 계산할까요(1~9)?")
+print("구구단 게임을 종료합니다.")
+```
+
+# Lab: 평균 구하기
+
+```python
+kor_score = [49, 80, 20, 100, 80]
+math_score = [43, 60, 85, 30, 90]
+eng_score = [49, 82, 48, 50, 100]
+midterm_score = [kor_score, math_score, eng_score]
+
+student_score = [0, 0, 0, 0, 0]
+i = 0
+for subject in midterm_score:
+    for score in subject:
+        student_score[i] += score # 학생마다 개별로 교과 점수를 저장
+        i += 1 # 학생 인덱스 구분
+    i = 0 # 과목이 바뀔 때 학생 인덱스 초기화
+else:
+    a, b, c, d, e = student_score # 학생별 점수를 언패킹
+    student_average = [a/3, b/3, c/3, d/3, e/3]
+    print(student_average)
+```
+
+# 코드의 오류를 처리하는 방법
+
+## 버그와 디버그
+- 오류를 버그라고 하고, 오류를 수정하는 과정을 디버그라고 한다
+- 오류를 만났을 때, 프로그램의 잘못을 찾아내고 고치는 것을 디버깅이라고 한다
+
+## 오류의 종류와 해결 방법
+
+### 문법적 오류
+- 인터프리터가 해석을 못 해 코드 자체를 실행시키지 못하는 오류
+- 대표적으로 들여쓰기 오류와 오탈자로 인한 오류가 있다
+
+### 논리적 오류
+- 코드를 제대로 작성했다고 생각했음에도, 원하는 결과가 나오지 않는 경우에 논리적 오류가 발생했을 가능성이 크다
+- 확인이 필요한 변수들에 print() 함수를 사용해 값을 확인
+
+# 함수 기초
+
+## 함수의 개념과 장점
+- 어떤 일을 수행하는 코드의 덩어리, 또는 코드의 묶음
+- 필요할 때마다 호출 가능
+- 논리적인 단위로 분할 가능
+- 코드의 캡슐화
+
+## 함수의 선언
+
+```python
+def 함수 이름 (매개변수 #1 ...):
+    수행문 1
+    수행문 2
+    return <반환값>
+```
+
+## 함수의 실행 순서
+
+```python
+def 함수 이름 (매개변수1, 매개변수2):
+    return 매개변수1 * 매개변수2
+
+print(함수 이름(값1, 값2))
+# 함수 호출 후 값1과 값2가 매개변수1과 매개변수2에 할당됨
+# 매개변수1과 매개변수2 변수에 할당된 값이 함수 이름에 입력되 함수 코드에 의해 반환값 매개변수1 * 매개변수2가 반환됨
+```
+
+## 함수의 형태
+- 반환값 없음, 매개변수 없음 = 함수 안 수행문만 수행
+- 반환값 없음, 매개변수 있음 = 매개변수를 사용하여 수행문만 수행
+- 반환값 있음, 매개변수 없음 = 매개변수 없이 수행문을 수행한 후, 결과값 반환
+- 반환값 있음, 매개변수 있음 = 매개변수를 사용하여 수행문을 수행한 후, 결과값 반환
+
+# 함수 심화
+
+## 함수의 호출 방식
+- 값에 의한 호출 = 인수를 넘길 때 값만 넘김
+- 참조 호출 = 인수를 넘길 때 메모리 주소를 넘김
+- 객체 호출 = 새로운 값을 할당하기 전까지는 기존에 넘어온 인수 객체의 주소값을 사용
+
+## 변수의 사용 범위
+- 지역 변수 = 함수 안에서만 사용
+- 전역 변수 = 프로그램 전체에서 사용
+
+## 재귀 함수
+- 자기 자신을 다시 부르는 함수
+
+# 함수의 인수
+
+## 키워드 인수
+- 함수에 입력되는 매개변수의 변수명을 사용하여 함수의 인수를 지정하는 방법
+
+```python
+def 함수 이름(매개변수1, 매개변수2):
+    수행문1
+    return 반환값
+
+함수 이름(매개변수2 = 값2, 매개변수1 = 값1)
+```
+
+## 디폴트 인수
+- 매개변수에 기본값을 지정하여 사용하고, 아무런 값도 인수로 넘기지 않으면 지정된 기본값을 사용하는 방식
+
+```python
+def 함수 이름(매개변수1, 매개변수2 = 기본값2):
+    수행문1
+    return 반환값
+
+함수 이름(값1)
+```
+
+## 가변 인수
+- 매개변수 개수가 정해지지 않고 진행해야 하는 경우
+
+```python
