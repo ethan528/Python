@@ -17,6 +17,7 @@ Dermatologist vs Neural Network
 
 https://paperswithcode.com/paper/dermatologist-vs-neural-network
 
+
 SkinGPT-4: An Interactive Dermatology Diagnostic System with Visual Large Language Model
 
 8 Jun 2023
@@ -37,6 +38,7 @@ SkinGPT-4: An Interactive Dermatology Diagnostic System with Visual Large Langua
 - SkinGPT-4 is publicly available at https: //github.com/JoshuaChou2018/SkinGPT-4.
 
 https://paperswithcode.com/paper/skingpt-a-dermatology-diagnostic-system-with
+
 
 Skin lesion classification of dermoscopic images using machine learning and convolutional neural network
 
@@ -64,6 +66,20 @@ Skin lesion classification of dermoscopic images using machine learning and conv
 - Convolutional neural network
 - To build a CNN, Tensorflow and Keras libraries were used to build and implement the model in Python 3.7.9.
 - Model hyperparameters
-- 
+- Adam is the most widely used optimization method for training deep neural networks today because it is simple to use, computationally efficient, and effective when dealing with enormous amounts of data and parameters.
+- The Multi-Class calculates the loss value using the “categorical cross-entropy” loss function.
+- Found that 150 epochs result in a model with low loss and no overfitting to the training set through experimentation (or not overfitted as best as we can).
+- Several early tests with batch sizes of 5, 10, 20, and 40 found that batch size 32 produced the best results.
+- The rate of learning is initially set to 0.001. The “step” we take along the gradient is controlled by the learning rate. The smaller the value, the smaller the step, and the larger the value, the bigger the step.
+- Results and discussion
+- we have observed that the Random Forest Machine algorithm provides better accuracy compared to other machine learning algorithms.
+- the proposed customized CNN model has a performance difference of 9% between the training and testing accuracy.
+- After 150 epochs of training, the model achieved low loss with minimal overfitting. We could also improve our accuracy by adding more training data.
+- We have also implemented Inception V3, a pre-trained model, and compared the accuracy with the proposed work.
+- Even though there is not much difference in the accuracy, the proposed CNN model has computationally less overhead in terms of total training time as compared to the InceptionV3 model due to more layers in the network.
+- Conclusion and future work
+- The results show that the customized CNN has obtained an accuracy of 95.18%, which is better than the proposed machine learning algorithms.
 
 https://www.nature.com/articles/s41598-022-22644-9#Tab7
+
+
