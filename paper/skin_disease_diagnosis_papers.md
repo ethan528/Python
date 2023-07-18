@@ -18,6 +18,7 @@ Dermatologist vs Neural Network
 https://paperswithcode.com/paper/dermatologist-vs-neural-network
 
 
+
 SkinGPT-4: An Interactive Dermatology Diagnostic System with Visual Large Language Model
 
 8 Jun 2023
@@ -38,6 +39,7 @@ SkinGPT-4: An Interactive Dermatology Diagnostic System with Visual Large Langua
 - SkinGPT-4 is publicly available at https: //github.com/JoshuaChou2018/SkinGPT-4.
 
 https://paperswithcode.com/paper/skingpt-a-dermatology-diagnostic-system-with
+
 
 
 Skin lesion classification of dermoscopic images using machine learning and convolutional neural network
@@ -83,3 +85,9 @@ Skin lesion classification of dermoscopic images using machine learning and conv
 https://www.nature.com/articles/s41598-022-22644-9#Tab7
 
 
+
+E pluribus unum interpretable convolutional neural networks
+
+14 July 2023
+
+- 
