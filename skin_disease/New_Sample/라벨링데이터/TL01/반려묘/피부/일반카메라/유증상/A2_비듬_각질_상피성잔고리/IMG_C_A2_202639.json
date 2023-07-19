@@ -1,0 +1,67 @@
+{
+	"metaData": {
+		"Raw data ID": "IMG_C_A2_202639.jpg",
+		"copyrighter": "㈜미소정보기술",
+		"resolution": "1920X1080",
+		"date": "2021-12-15",
+		"breed": "러시안블루",
+		"age": "2",
+		"gender": "M",
+		"region": "A",
+		"camera type": "IMG",
+		"species": "C",
+		"lesions": "A2",
+		"diagnosis": "",
+		"Path": "유증상",
+		"identifier": "피부질환",
+		"src_path": "/라벨링데이터/반려묘/피부/일반카메라/유증상/A2_비듬_각질_상피성잔고리",
+		"label_path": "/라벨링데이터/반려묘/피부/일반카메라/유증상/A2_비듬_각질_상피성잔고리",
+		"type": "json",
+		"fileformat": "jpg"
+	},
+	"inspRejectYn": "N",
+	"labelingInfo": [
+		{
+			"polygon": {
+				"color": "#1beaac",
+				"location": [
+					{
+						"x1": 863,
+						"y1": 405,
+						"x2": 885,
+						"y2": 376,
+						"x3": 874,
+						"y3": 334,
+						"x4": 794,
+						"y4": 318,
+						"x5": 733,
+						"y5": 325,
+						"x6": 712,
+						"y6": 364,
+						"x7": 775,
+						"y7": 409,
+						"x8": 863,
+						"y8": 405
+					}
+				],
+				"label": "A2_비듬_각질_상피성잔고리",
+				"type": "polygon"
+			}
+		},
+		{
+			"box": {
+				"color": "#1beaac",
+				"location": [
+					{
+						"x": 712,
+						"y": 318,
+						"width": 173,
+						"height": 91
+					}
+				],
+				"label": "A2_비듬_각질_상피성잔고리",
+				"type": "box"
+			}
+		}
+	]
+}

@@ -1,0 +1,69 @@
+{
+	"metaData": {
+		"Raw data ID": "IMG_C_A2_201452.jpg",
+		"copyrighter": "㈜미소정보기술",
+		"resolution": "1920X1080",
+		"date": "2021-12-15",
+		"breed": "스코티쉬폴드",
+		"age": "10",
+		"gender": "F",
+		"region": "L",
+		"camera type": "IMG",
+		"species": "C",
+		"lesions": "A2",
+		"diagnosis": "",
+		"Path": "유증상",
+		"identifier": "피부질환",
+		"src_path": "/라벨링데이터/반려묘/피부/일반카메라/유증상/A2_비듬_각질_상피성잔고리",
+		"label_path": "/라벨링데이터/반려묘/피부/일반카메라/유증상/A2_비듬_각질_상피성잔고리",
+		"type": "json",
+		"fileformat": "jpg"
+	},
+	"inspRejectYn": "N",
+	"labelingInfo": [
+		{
+			"polygon": {
+				"color": "#1beaac",
+				"location": [
+					{
+						"x1": 323,
+						"y1": 816,
+						"x2": 429,
+						"y2": 753,
+						"x3": 496,
+						"y3": 661,
+						"x4": 454,
+						"y4": 565,
+						"x5": 236,
+						"y5": 548,
+						"x6": 87,
+						"y6": 622,
+						"x7": 50,
+						"y7": 761,
+						"x8": 79,
+						"y8": 852,
+						"x9": 323,
+						"y9": 816
+					}
+				],
+				"label": "A2_비듬_각질_상피성잔고리",
+				"type": "polygon"
+			}
+		},
+		{
+			"box": {
+				"color": "#1beaac",
+				"location": [
+					{
+						"x": 50,
+						"y": 548,
+						"width": 446,
+						"height": 304
+					}
+				],
+				"label": "A2_비듬_각질_상피성잔고리",
+				"type": "box"
+			}
+		}
+	]
+}

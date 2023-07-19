@@ -1,0 +1,65 @@
+{
+	"metaData": {
+		"Raw data ID": "IMG_C_A2_201517.jpg",
+		"copyrighter": "㈜미소정보기술",
+		"resolution": "1920X1080",
+		"date": "2021-12-15",
+		"breed": "페르시안",
+		"age": "11",
+		"gender": "M",
+		"region": "A",
+		"camera type": "IMG",
+		"species": "C",
+		"lesions": "A2",
+		"diagnosis": "",
+		"Path": "유증상",
+		"identifier": "피부질환",
+		"src_path": "/라벨링데이터/반려묘/피부/일반카메라/유증상/A2_비듬_각질_상피성잔고리",
+		"label_path": "/라벨링데이터/반려묘/피부/일반카메라/유증상/A2_비듬_각질_상피성잔고리",
+		"type": "json",
+		"fileformat": "jpg"
+	},
+	"inspRejectYn": "N",
+	"labelingInfo": [
+		{
+			"polygon": {
+				"color": "#1beaac",
+				"location": [
+					{
+						"x1": 1620,
+						"y1": 565,
+						"x2": 1645,
+						"y2": 566,
+						"x3": 1667,
+						"y3": 582,
+						"x4": 1666,
+						"y4": 615,
+						"x5": 1631,
+						"y5": 656,
+						"x6": 1567,
+						"y6": 633,
+						"x7": 1620,
+						"y7": 565
+					}
+				],
+				"label": "A2_비듬_각질_상피성잔고리",
+				"type": "polygon"
+			}
+		},
+		{
+			"box": {
+				"color": "#1beaac",
+				"location": [
+					{
+						"x": 1567,
+						"y": 565,
+						"width": 100,
+						"height": 91
+					}
+				],
+				"label": "A2_비듬_각질_상피성잔고리",
+				"type": "box"
+			}
+		}
+	]
+}

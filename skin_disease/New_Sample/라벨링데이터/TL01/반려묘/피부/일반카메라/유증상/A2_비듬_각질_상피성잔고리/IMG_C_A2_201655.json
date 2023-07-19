@@ -1,0 +1,147 @@
+{
+	"metaData": {
+		"Raw data ID": "IMG_C_A2_201655.jpg",
+		"copyrighter": "㈜미소정보기술",
+		"resolution": "1920X1080",
+		"date": "2021-12-15",
+		"breed": "코리안숏헤어",
+		"age": "10",
+		"gender": "F",
+		"region": "B",
+		"camera type": "IMG",
+		"species": "C",
+		"lesions": "A2",
+		"diagnosis": "",
+		"Path": "유증상",
+		"identifier": "피부질환",
+		"src_path": "/라벨링데이터/반려묘/피부/일반카메라/유증상/A2_비듬_각질_상피성잔고리",
+		"label_path": "/라벨링데이터/반려묘/피부/일반카메라/유증상/A2_비듬_각질_상피성잔고리",
+		"type": "json",
+		"fileformat": "jpg"
+	},
+	"inspRejectYn": "N",
+	"labelingInfo": [
+		{
+			"polygon": {
+				"color": "#1beaac",
+				"location": [
+					{
+						"x1": 1336,
+						"y1": 789,
+						"x2": 1336,
+						"y2": 840,
+						"x3": 1363,
+						"y3": 884,
+						"x4": 1441,
+						"y4": 894,
+						"x5": 1493,
+						"y5": 867,
+						"x6": 1501,
+						"y6": 801,
+						"x7": 1448,
+						"y7": 764,
+						"x8": 1336,
+						"y8": 789
+					}
+				],
+				"label": "A2_비듬_각질_상피성잔고리",
+				"type": "polygon"
+			}
+		},
+		{
+			"polygon": {
+				"color": "#1beaac",
+				"location": [
+					{
+						"x1": 1194,
+						"y1": 543,
+						"x2": 1298,
+						"y2": 536,
+						"x3": 1312,
+						"y3": 642,
+						"x4": 1289,
+						"y4": 693,
+						"x5": 1163,
+						"y5": 695,
+						"x6": 1143,
+						"y6": 625,
+						"x7": 1194,
+						"y7": 543
+					}
+				],
+				"label": "A2_비듬_각질_상피성잔고리",
+				"type": "polygon"
+			}
+		},
+		{
+			"polygon": {
+				"color": "#1beaac",
+				"location": [
+					{
+						"x1": 718,
+						"y1": 833,
+						"x2": 775,
+						"y2": 849,
+						"x3": 902,
+						"y3": 928,
+						"x4": 873,
+						"y4": 1041,
+						"x5": 804,
+						"y5": 1055,
+						"x6": 720,
+						"y6": 1008,
+						"x7": 718,
+						"y7": 833
+					}
+				],
+				"label": "A2_비듬_각질_상피성잔고리",
+				"type": "polygon"
+			}
+		},
+		{
+			"box": {
+				"color": "#1beaac",
+				"location": [
+					{
+						"x": 1336,
+						"y": 764,
+						"width": 165,
+						"height": 130
+					}
+				],
+				"label": "A2_비듬_각질_상피성잔고리",
+				"type": "box"
+			}
+		},
+		{
+			"box": {
+				"color": "#1beaac",
+				"location": [
+					{
+						"x": 1143,
+						"y": 536,
+						"width": 169,
+						"height": 159
+					}
+				],
+				"label": "A2_비듬_각질_상피성잔고리",
+				"type": "box"
+			}
+		},
+		{
+			"box": {
+				"color": "#1beaac",
+				"location": [
+					{
+						"x": 718,
+						"y": 833,
+						"width": 184,
+						"height": 222
+					}
+				],
+				"label": "A2_비듬_각질_상피성잔고리",
+				"type": "box"
+			}
+		}
+	]
+}

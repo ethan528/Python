@@ -1,0 +1,69 @@
+{
+	"metaData": {
+		"Raw data ID": "IMG_C_A2_04_202419.jpg",
+		"copyrighter": "㈜미소정보기술",
+		"resolution": "1920X1080",
+		"date": "2021-12-15",
+		"breed": "코리안숏헤어",
+		"age": "6",
+		"gender": "F",
+		"region": "L",
+		"camera type": "IMG",
+		"species": "C",
+		"lesions": "A2",
+		"diagnosis": "",
+		"Path": "유증상",
+		"identifier": "피부질환",
+		"src_path": "/라벨링데이터/반려묘/피부/일반카메라/유증상/A2_비듬_각질_상피성잔고리",
+		"label_path": "/라벨링데이터/반려묘/피부/일반카메라/유증상/A2_비듬_각질_상피성잔고리",
+		"type": "json",
+		"fileformat": "jpg"
+	},
+	"inspRejectYn": "N",
+	"labelingInfo": [
+		{
+			"polygon": {
+				"color": "#1beaac",
+				"location": [
+					{
+						"x1": 1031,
+						"y1": 619,
+						"x2": 1039,
+						"y2": 648,
+						"x3": 1046,
+						"y3": 674,
+						"x4": 1026,
+						"y4": 715,
+						"x5": 968,
+						"y5": 702,
+						"x6": 916,
+						"y6": 664,
+						"x7": 888,
+						"y7": 653,
+						"x8": 882,
+						"y8": 653,
+						"x9": 1031,
+						"y9": 619
+					}
+				],
+				"label": "A2_비듬_각질_상피성잔고리",
+				"type": "polygon"
+			}
+		},
+		{
+			"box": {
+				"color": "#1beaac",
+				"location": [
+					{
+						"x": 882,
+						"y": 619,
+						"width": 164,
+						"height": 96
+					}
+				],
+				"label": "A2_비듬_각질_상피성잔고리",
+				"type": "box"
+			}
+		}
+	]
+}
